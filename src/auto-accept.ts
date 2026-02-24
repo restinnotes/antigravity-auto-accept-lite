@@ -165,8 +165,7 @@ export class AutoAcceptService implements vscode.Disposable {
                         let isExpander = false;
 
                         // ── Target tokens ──
-                        if (['accept all', 'accept', 'confirm', 'run', 'always allow', 'allow'].includes(rawText)) isMatch = true;
-                        if (rawText.includes('always run') && rawText.length < 25) isMatch = true;
+                        if (['accept all', 'accept', 'confirm', 'run', 'always allow', 'allow', 'allow this conversation'].includes(rawText)) isMatch = true;
                         if (rawText.startsWith('run alt')) isMatch = true;
 
                         // ── Expanders ── (expand all only, not plain "expand")
