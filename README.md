@@ -1,3 +1,5 @@
+English | [中文](#中文文档)
+
 # Auto-Accept Lite
 
 Lightweight hands-free mode for Google Antigravity IDE.  
@@ -22,8 +24,8 @@ Automatically accepts agent-suggested edits, terminal commands, and permission p
 
 ### From Source
 ```bash
-git clone https://github.com/restinnotes/aphelion-halo.git
-cd aphelion-halo
+git clone https://github.com/restinnotes/antigravity-auto-accept-lite.git
+cd antigravity-auto-accept-lite
 npm install
 npm run build
 npx @vscode/vsce package --no-dependencies
@@ -73,8 +75,6 @@ This extension is a **pure local UI automation tool**. It:
 MIT
 
 ---
-
-English | [中文](#中文文档)
 
 ## 中文文档
 
