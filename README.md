@@ -22,7 +22,7 @@ Automatically accepts agent-suggested edits, terminal commands, and permission p
 
 ### From Source
 ```bash
-git clone https://github.com/YOUR_USERNAME/aphelion-halo.git
+git clone https://github.com/restinnotes/aphelion-halo.git
 cd aphelion-halo
 npm install
 npm run build
