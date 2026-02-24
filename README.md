@@ -5,8 +5,6 @@ English | [中文](#中文文档)
 Lightweight hands-free mode for Google Antigravity IDE.  
 Automatically accepts agent-suggested edits, terminal commands, and permission prompts via Chrome DevTools Protocol (CDP).
 
-**No quota monitoring. No token scraping. No Language Server access. Zero ban risk.**
-
 ## ✨ Features
 
 - 🤖 **Auto-Accept** — Automatically clicks Accept, Run, Confirm, Allow buttons
@@ -66,9 +64,11 @@ This extension is a **pure local UI automation tool**. It:
 - ❌ Does NOT extract CSRF tokens
 - ❌ Does NOT access the Antigravity Language Server
 - ❌ Does NOT send any data externally
-- ❌ Does NOT monitor quotas
 
-**This extension will NOT get your account banned** — unlike quota monitoring extensions that scrape internal Language Server data.
+## ❓ FAQ
+
+**Q: Is there any ban risk using this extension?**
+A: No. Unlike some quota monitoring extensions that scrape internal Language Server data (which can lead to account bans), this extension is a pure UI automation tool. It does not interact with Google's servers, APIs, or your access tokens.
 
 ## 📝 License
 
@@ -82,8 +82,6 @@ MIT
 
 Google Antigravity IDE 的轻量级自动接受扩展。  
 通过 Chrome DevTools Protocol (CDP) 自动接受 Agent 建议的编辑、终端命令和权限请求。
-
-**无配额监控。无 Token 窃取。无 Language Server 访问。零封号风险。**
 
 ### 功能
 - 🤖 **自动接受** — 自动点击 Accept、Run、Confirm、Allow 按钮
@@ -104,4 +102,7 @@ Google Antigravity IDE 的轻量级自动接受扩展。
 - 配额数据获取
 - 任何外部数据传输
 
-**不会导致封号** —— 与那些通过窃取内部 Token 监控配额的扩展完全不同。
+### ❓ 常见问题 (FAQ)
+
+**Q: 使用这个扩展会导致 Google 账号被封吗？**
+A: **不会**。之前社区出现封号是因为某些配额监控插件窃取了内部 Token 并频繁请求服务器。本扩展**仅仅是本地的 UI 自动点击工具**，不涉及任何对 Google 服务的未授权访问，因此没有封号风险。
