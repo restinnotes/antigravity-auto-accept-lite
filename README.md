@@ -20,10 +20,18 @@ Automatically accepts agent-suggested edits, terminal commands, and permission p
 2. In VS Code: `Ctrl+Shift+P` → `Extensions: Install from VSIX...`
 3. Select the downloaded file
 
-### From Source
+### 🖥️ Windows Setup (Required)
+The Auto-Accept feature requires Antigravity IDE to be started with a specific debugging port (`--remote-debugging-port=9000`). We provide a script to create a special desktop shortcut for this:
+1. Clone the repository:
 ```bash
 git clone https://github.com/restinnotes/antigravity-auto-accept-lite.git
 cd antigravity-auto-accept-lite
+```
+2. Run the `scripts\install_shortcut.bat` file.
+3. A new shortcut named **Antigravity (AutoAccept)** will appear on your desktop. **Always use this shortcut to start the IDE.**
+
+### 🛠️ Building the Extension
+```bash
 npm install
 npm run build
 npx @vscode/vsce package --no-dependencies
@@ -90,9 +98,11 @@ Google Antigravity IDE 的轻量级自动接受扩展。
 - ⚙️ **可配置间隔** — 调整扫描频率 (200ms–5000ms)
 
 ### 安装
-1. 从 [Releases](../../releases) 下载最新 `.vsix`
-2. VS Code 中: `Ctrl+Shift+P` → `Extensions: Install from VSIX...`
-3. 选择下载的文件
+1. 下载最新 `.vsix` 文件
+2. 在 VS Code 中安装
+3. **【重要】Windows 环境配置**：
+   该扩展需要 IDE 开启调试端口 (`--remote-debugging-port=9000`) 才能工作。
+   请克隆本仓库并运行 `scripts\install_shortcut.bat`。这会在你的桌面上生成一个名为 **Antigravity (AutoAccept)** 的快捷方式。**以后请始终使用该快捷方式启动 IDE。**
 
 ### 安全性说明
 本扩展是**纯本地 UI 自动化工具**，完全不涉及：
