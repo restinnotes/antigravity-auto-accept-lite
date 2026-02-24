@@ -1,0 +1,65 @@
+{
+  "name": "auto-accept-lite",
+  "displayName": "Auto-Accept Lite",
+  "description": "Lightweight hands-free mode for Antigravity IDE — auto-accepts agent steps via CDP. No quota monitoring, no token scraping.",
+  "version": "1.0.0",
+  "publisher": "local",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.104.0"
+  },
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "autoAcceptLite.toggle",
+        "title": "Toggle Auto-Accept",
+        "category": "Auto-Accept Lite",
+        "icon": "$(check-all)"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "autoAcceptLite.toggle",
+        "key": "ctrl+shift+a",
+        "mac": "cmd+shift+a"
+      }
+    ],
+    "configuration": {
+      "title": "Auto-Accept Lite",
+      "properties": {
+        "autoAcceptLite.enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable auto-accept mode (automatically accept agent steps)"
+        },
+        "autoAcceptLite.interval": {
+          "type": "number",
+          "default": 800,
+          "minimum": 200,
+          "maximum": 5000,
+          "description": "Check interval in milliseconds (how often to scan for accept buttons)"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "node esbuild.js",
+    "watch": "node esbuild.js --watch --sourcemap",
+    "vscode:prepublish": "npm run build",
+    "package": "npx @vscode/vsce package --no-dependencies"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/vscode": "^1.104.0",
+    "@types/ws": "^8.5.10",
+    "esbuild": "^0.27.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "ws": "^8.17.0"
+  }
+}
