@@ -119,7 +119,7 @@ export class AutoAcceptService implements vscode.Disposable {
      * The clicker script injected into webview contexts.
      *
      * Target keywords (user-customized):
-     *   - accept all, accept, confirm, run, always allow, allow
+     *   - accept all, accept, confirm, run, retry, always allow, allow
      *   - always run (< 25 chars), run alt*
      *   - expand all, requires input (expanders)
      *
@@ -165,7 +165,7 @@ export class AutoAcceptService implements vscode.Disposable {
                         let isExpander = false;
 
                         // ── Target tokens ──
-                        if (['accept all', 'accept', 'confirm', 'run', 'always allow', 'allow', 'allow this conversation'].includes(rawText)) isMatch = true;
+                        if (['accept all', 'accept', 'confirm', 'run', 'retry', 'always allow', 'allow', 'allow this conversation'].includes(rawText)) isMatch = true;
                         if (rawText.startsWith('run alt')) isMatch = true;
                         if (rawText.startsWith('always allow')) isMatch = true;
 

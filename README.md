@@ -45,6 +45,7 @@ npx @vscode/vsce package --no-dependencies
 | `accept` | Accept single change |
 | `confirm` | Confirm action |
 | `run` | Run command |
+| `retry` | Retry action |
 | `always allow` | Always allow permission |
 | `allow` | Allow permission |
 | `always run` | Always run (< 25 chars) |
